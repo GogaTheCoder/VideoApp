@@ -1,5 +1,6 @@
 [versions]
 agp = "8.8.1"
+javassist = "3.28.0-GA"
 kotlin = "1.9.24"
 coreKtx = "1.15.0"
 junit = "4.13.2"
@@ -10,14 +11,18 @@ material = "1.12.0"
 activity = "1.10.0"
 constraintlayout = "2.2.0"
 mediarouter = "1.7.0"
+mockitoCore = "4.0.0"
 playServicesCastFramework = "22.0.0"
 media3CommonKtx = "1.5.1"
 playServicesAdsLite = "24.0.0"
+playServicesCastFrameworkVersion = "19.0.0"
+powermockModuleJunit4 = "2.0.9"
 toolsCore = "1.0.0-alpha11"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-mediarouter = { module = "androidx.mediarouter:mediarouter", version.ref = "mediarouter" }
+javassist = { module = "org.javassist:javassist", version.ref = "javassist" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
@@ -25,10 +30,16 @@ androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+mockito-core = { module = "org.mockito:mockito-core", version.ref = "mockitoCore" }
+mockito-inline = { module = "org.mockito:mockito-inline", version.ref = "mockitoCore" }
 play-services-cast-framework = { module = "com.google.android.gms:play-services-cast-framework", version.ref = "playServicesCastFramework" }
 androidx-media3-common-ktx = { group = "androidx.media3", name = "media3-common-ktx", version.ref = "media3CommonKtx" }
 play-services-ads-lite = { group = "com.google.android.gms", name = "play-services-ads-lite", version.ref = "playServicesAdsLite" }
 androidx-tools-core = { group = "androidx.privacysandbox.tools", name = "tools-core", version.ref = "toolsCore" }
+play-services-cast-framework-v1900 = { module = "com.google.android.gms:play-services-cast-framework", version.ref = "playServicesCastFrameworkVersion" }
+powermock-api-mockito2 = { module = "org.powermock:powermock-api-mockito2", version.ref = "powermockModuleJunit4" }
+powermock-core = { module = "org.powermock:powermock-core", version.ref = "powermockModuleJunit4" }
+powermock-module-junit4 = { module = "org.powermock:powermock-module-junit4", version.ref = "powermockModuleJunit4" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

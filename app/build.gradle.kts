@@ -49,4 +49,15 @@ dependencies {
 
     implementation(libs.play.services.cast.framework)
     implementation(libs.androidx.mediarouter)
+
+//    implementation (libs.play.services.cast.framework.v1900)
+
+    testImplementation (libs.mockito.core)
+    testImplementation (libs.mockito.inline)
+    testImplementation (libs.powermock.module.junit4)
+    testImplementation (libs.powermock.api.mockito2)
+    testImplementation (libs.powermock.core)
+    testImplementation (libs.javassist)
+
+
 }
