@@ -1,24 +1,19 @@
-// src/test/java/com/example/videoapp/CastSessionTest.kt
-
 package com.example.videoapp
 
 import com.google.android.gms.cast.MediaInfo
 import com.google.android.gms.cast.framework.CastSession
 import com.google.android.gms.cast.framework.media.RemoteMediaClient
 import org.junit.Test
-import org.junit.runner.RunWith
 import org.mockito.Mockito.*
-import org.powermock.api.mockito.PowerMockito
 import org.powermock.core.classloader.annotations.PrepareForTest
-import org.powermock.modules.junit4.PowerMockRunner
 
-@RunWith(PowerMockRunner::class)
+
 @PrepareForTest(CastSession::class, RemoteMediaClient::class)
 class CastSessionTest {
     @Test
     fun testVideoPlayback() {
-        val mockCastSession = PowerMockito.mock(CastSession::class.java)
-        val mockRemoteMediaClient = PowerMockito.mock(RemoteMediaClient::class.java)
+        val mockCastSession = mock(CastSession::class.java)
+        val mockRemoteMediaClient = mock(RemoteMediaClient::class.java)
 
         `when`(mockCastSession.remoteMediaClient).thenReturn(mockRemoteMediaClient)
 
@@ -31,3 +26,4 @@ class CastSessionTest {
         verify(mockRemoteMediaClient).load(mediaInfo, true, 0)
     }
 }
+
