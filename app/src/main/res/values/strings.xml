@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">VideoApp</string>
+    <string name="start_googleCast">Запустить видео на Google Cast</string>
+</resources>
